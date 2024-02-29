@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="templatemo">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Liberty NFT Marketplace - HTML CSS Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'Market/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!--Favicon--> 
+  <link href="{% static 'Market/images/Favicon/favicon.png' %}" rel="icon">
+  <link href="{% static 'Market/images/Favicon/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="{% static 'Market/css/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'Market/css/templatemo-liberty-market.css' %}">
+  <link rel="stylesheet" href="{% static 'Market/css/owl.css' %}">
+  <link rel="stylesheet" href="{% static 'Market/css/animate.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  <!--Testimonials Links Css and Js-->
+  {% comment %} <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans" rel="stylesheet"> {% endcomment %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+
+  <style>
+    body {
+        font-family: "Open Sans", sans-serif;
+    }
+    p{
+        fonnt-size: 15px;
+        line-height: 30px;
+        color: #388769;
+    }
+    h2 {
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        position: relative;
+        margin: 30px 0 60px;
+    }
+    h2::after {
+        content: "";
+        width: 200px;
+        position: absolute;
+        margin: 0 auto;
+        height: 3px;
+        background: #8fbc54;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+    }
+    .col-center {
+        margin: 0 auto;
+        float: none !important;
+    }
+    .carousel {
+        margin: 50px auto;
+        padding: 0 70px;
+    }
+    .carousel .item {
+        color: #999;
+        font-size: 14px;
+        text-align: center;
+        overflow: hidden;
+        min-height: 290px;
+    }
+    .carousel .item .img-box {
+        width: 135px;
+        height: 135px;
+        margin: 0 auto;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+    }
+    .carousel .img-box img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+    }
+    .carousel .testimonial {
+        padding: 30px 0 10px;
+    }
+    .carousel .overview {	
+        font-style: italic;
+    }
+    .carousel .overview b {
+        text-transform: uppercase;
+        color: #7AA641;
+    }
+    .carousel .carousel-control {
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        top: 50%;
+        background: none;
+    }
+    .carousel-control i {
+        font-size: 68px;
+        line-height: 42px;
+        position: absolute;
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.8);
+        text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+    }
+    .carousel .carousel-indicators {
+        bottom: -40px;
+    }
+    .carousel-indicators li, .carousel-indicators li.active {
+        width: 10px;
+        height: 10px;
+        margin: 1px 3px;
+        border-radius: 50%;
+    }
+    .carousel-indicators li {	
+        background: #999;
+        border-color: transparent;
+        box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+    }
+    .carousel-indicators li.active {	
+        background: #555;		
+        box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+    }
+
+    {% comment %} footer-style {% endcomment %}
+    .footer-dark {
+      margin-bottom: -50px;
+      padding: 50px 0;
+      color: #f0f9ff;
+      {% comment %} background-color: #282d32; {% endcomment %}
+    }
+    
+    .footer-dark h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .footer-dark ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+    
+    .footer-dark ul a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.6;
+    }
+    
+    .footer-dark ul a:hover {
+      opacity: 0.8;
+    }
+    
+    @media (max-width:767px) {
+      .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+    
+    .footer-dark .item.text {
+      margin-bottom: 36px;
+    }
+    
+    @media (max-width:767px) {
+      .footer-dark .item.text {
+        margin-bottom: 0;
+      }
+    }
+    
+    .footer-dark .item.text p {
+      opacity: 0.6;
+      margin-bottom: 0;
+    }
+    
+    .footer-dark .item.social {
+      text-align: center;
+    }
+    
+    @media (max-width:991px) {
+      .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+    
+    .footer-dark .item.social > a {
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+      margin: 0 8px;
+      color: #fff;
+      opacity: 0.75;
+    }
+    
+    .footer-dark .item.social > a:hover {
+      opacity: 0.9;
+    }
+    
+    .footer-dark .copyright {
+      text-align: center;
+      padding-top: 24px;
+      opacity: 0.3;
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+</style>
+</head>
+<body>
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="{% url 'home' %}" class="logo">
+              <img src="{% static 'Market/images/logo.png' %}" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'explore' %}">Explore</a></li>
+              {% comment %} <li><a href="{% url 'details' %}">Item Details</a></li> {% endcomment %}
+              <li><a href="{% url 'author' %}" class="active">About Us</a></li>
+              <li><a href="{% url 'create' %}">Contact Us</a></li>
+            </ul>   
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <div class="page-heading normal-space">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>About Us</h3>
+          <h4>View Details For Author</h4>
+          <span>Welcome to Banucci Household Utensils, a leading provider of premium kitchenware in the UAE. Founded in [year], we offer a diverse range of high-quality household utensils designed to enhance your cooking experience and elevate your home décor.
+
+            With our commitment to quality, innovation, and customer satisfaction, Banucci has quickly become a trusted name in the industry. Our collection includes stylish tableware, sophisticated cutlery, elegant drinkware, and practical food containers, curated to meet the highest standards of performance and design.
+            
+            At Banucci, we prioritize sustainability and eco-friendliness, incorporating environmentally conscious practices into our operations. We're passionate about helping you create memorable dining experiences while minimizing our impact on the planet.
+            
+            Thank you for choosing Banucci Household Utensils. Explore our collection online or visit our store to discover the perfect additions to your kitchen.
+            
+            For inquiries or assistance, contact us or visit our store located at [address]</span>
+          <div class="buttons">
+            <div class="main-button">
+              <a href="{% url 'explore' %}">Explore Our Items</a>
+            </div>
+            {% comment %} <div class="border-button">
+              <a href="{% url 'create' %}">Create Your NFT</a>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-15 col-center">
+        <h2>Testimonials</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>   
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="img-box"><img src="{% static 'Market/images/testimonial.jpg' %}" alt=""></div>
+              <p class="testimonial">I've been using Bannucci household utensils for years now, and I must say, they are incredibly durable and reliable. From their stainless steel pots and pans to their ergonomic cooking utensils, every product is designed with quality in mind. Cooking has become a breeze with Bannucci in my kitchen!</p>
+              <p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+            </div>
+            <div class="item">
+              <div class="img-box"><img src="{% static 'Market/images/testimonial.jpg' %}" alt=""></div>
+              <p class="testimonial">As a professional chef, I demand the best tools in my kitchen, and Bannucci utensils never disappoint. The precision of their knives, the heat distribution of their cookware, and the comfort of their handles make all the difference in my cooking. I highly recommend Bannucci to anyone serious about their culinary endeavors.</p>
+              <p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
+            </div>
+            <div class="item">
+              <div class="img-box"><img src="{% static 'Market/images/testimonial.jpg' %}" alt=""></div>
+              <p class="testimonial">Bannucci household utensils have truly transformed the way I cook at home. Not only are their products stylish and modern, but they also perform exceptionally well. Whether I'm sautéing vegetables or baking desserts, I can always rely on Bannucci to deliver consistent results. Plus, their easy-to-clean design is an added bonus for busy families like mine!</p>
+              <p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
+            </div>
+          </div>
+          <!-- Carousel controls -->
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-dark">
+    <footer>
+        <div class="container">
+          <div class="row">
+              <div class="col-md-3 item">
+                <h3>What we proide:</h3>
+                <ul>
+                    <li><a href="#">Extensive selection of plastic and disposable utensils available for distribution throughout the UAE</a></li> <br>
+                    <li><a href="#">Expertise in manufacturing and distributing top-tier household utensils</a></li> <br>
+                    <li><a href="#">Dedicated to catering to the requirements of both wholesale and retail sectors</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 item">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Supply of plastic and disposable utensils in the UAE</a></li> <br>
+                    <li><a href="#">Manufacturing and distribution of high-quality household utensils</a></li> <br>
+                    <li><a href="#">Customized packaging and branding services</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 item">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="{% url "author" %}">Company</a></li> <br>
+                    <li><a href="{% url "author" %}">Team</a></li> <br>
+                    <li><a href="{% url "author" %}">Careers</a></li>
+                </ul>
+              </div>
+
+                  <div class="col item social">
+                    <h3>Follow us on Social Media</h3>         <br>
+                    <a href="https://www.facebook.com/bannucillc" target="_blank"><i class="fa fa-facebook"></i></a><br><br>
+                    <a href="https://www.tiktok.com/@bannuccillc" target="_blank"><i class="fa fa-tiktok"></i></a><br><br>
+                    <a href="https://www.instagram.com/bannuccillc" target="_blank"><i class="fa fa-instagram"></i></a><br><br>
+                  </div>
+          </div>
+          {% comment %} <p class="copyright">BBBootstrap.com &copy; 2020</p> {% endcomment %}
+      </div>
+  </footer>
+</div>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'Market/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'Market/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'Market/js/isotope.min.js' %}"></script>
+  <script src="{% static 'Market/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'Market/js/tabs.js' %}"></script>
+  <script src="{% static 'Market/js/popup.js' %}"></script>
+  <script src="{% static 'Market/js/custom.js' %}"></script>
+
+</body>
+</html>

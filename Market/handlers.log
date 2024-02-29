@@ -1,0 +1,5 @@
+Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials jj26-20020a05600c6a1a00b0041294a6fc03sm15334744wmb.9 - gsmtp')
+Error sending email: send_mail() got multiple values for argument 'fail_silently'
+Error sending email: send_mail() got multiple values for argument 'fail_silently'
+Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials jd17-20020a05600c68d100b004129335947fsm15865003wmb.8 - gsmtp')
+Error sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials y5-20020a1c4b05000000b004129f87a2c6sm997943wma.1 - gsmtp')

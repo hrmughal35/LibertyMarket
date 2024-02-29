@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="templatemo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Banucci Household Utensils Trading-LLC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'Market/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!--Favicon--> 
+    <link href="{% static 'Market/images/Favicon/favicon.png' %}" rel="icon">
+    <link href="{% static 'Market/images/Favicon/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'Market/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'Market/css/templatemo-liberty-market.css' %}">
+    <link rel="stylesheet" href="{% static 'Market/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'Market/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!--Font Awesome-->
+    {% comment %} <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans" rel="stylesheet"> {% endcomment %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  {% endcomment %}
+    <style> 
+      .footer-dark {
+        background-color: #388769;
+        margin-bottom: -50px;
+        padding: 50px 0;
+        color: #f0f9ff;
+        {% comment %} background-color: #282d32; {% endcomment %}
+      }
+      
+      .footer-dark h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      
+      .footer-dark ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      
+      .footer-dark ul a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.6;
+      }
+      
+      .footer-dark ul a:hover {
+        opacity: 0.8;
+      }
+      
+      @media (max-width:767px) {
+        .footer-dark .item:not(.social) {
+          text-align: center;
+          padding-bottom: 20px;
+        }
+      }
+      
+      .footer-dark .item.text {
+        margin-bottom: 36px;
+      }
+      
+      @media (max-width:767px) {
+        .footer-dark .item.text {
+          margin-bottom: 0;
+        }
+      }
+      
+      .footer-dark .item.text p {
+        opacity: 0.6;
+        margin-bottom: 0;
+      }
+      
+      .footer-dark .item.social {
+        text-align: center;
+      }
+      
+      @media (max-width:991px) {
+        .footer-dark .item.social {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+      
+      .footer-dark .item.social > a {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+        margin: 0 8px;
+        color: #fff;
+        opacity: 0.75;
+      }
+      
+      .footer-dark .item.social > a:hover {
+        opacity: 0.9;
+      }
+      
+      .footer-dark .copyright {
+        text-align: center;
+        padding-top: 24px;
+        opacity: 0.3;
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+    </style>
+<!--
+  
+
+TemplateMo 577 Liberty Market
+
+https://templatemo.com/tm-577-liberty-market
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url "home" %}" class="logo">
+                        <img src="{% static 'Market/images/logo.png' %}" padding alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url "explore" %}" class="active">Explore</a></li>
+                        {% comment %} <li><a href="{% url "details" %}">Item Details</a></li> {% endcomment %}
+                        <li><a href="{% url "author" %}">About Us</a></li>
+                        <li><a href="{% url "create" %}">Contact Us</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 align-self-center">
+          <div class="header-text" style="margin-left: 50px; margin-bottom: 200px">
+            <h2>Banucci Household Utensils</h2>
+            <h3>Banucci: Explore our items here</h3>
+            <p>Banucci Household Utensils Company offers premium-quality kitchenware crafted for both functionality and elegance, enhancing culinary experiences worldwide.</p>
+            <div class="buttons">
+              {% comment %} <div class="main-button">
+                <a href="https://youtube.com/templatemo" target="_blank">Watch Our Videos</a>
+              </div> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Main Banner Area End ***** -->
+  
+{% comment %} 
+  <div class="create-nft">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-heading">
+            <div class="line-dec"></div>
+            <h2>Create Your NFT & Put It On The Market.</h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="main-button">
+            <a href="{% url "create" %}">Create Your NFT Now</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item first-item">
+            <div class="number">
+              <h6>1</h6>
+            </div>
+            <div class="icon">
+              <img src="{% static 'Market/images/icon-02.png' %}" alt="">
+            </div>
+            <h4>Set Up Your Wallet</h4>
+            <p>NFT means Non-Fungible Token that are used in digital cryptocurrency markets. There are many different kinds of NFTs in the industry.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item second-item">
+            <div class="number">
+              <h6>2</h6>
+            </div>
+            <div class="icon">
+              <img src="{% static 'Market/images/icon-04.png' %}" alt="">
+            </div>
+            <h4>Add Your Digital NFT</h4>
+            <p>There are 5 different HTML pages included in this NFT <a href="https://templatemo.com/page/1" target="_blank" rel="nofollow">website template</a>. You can edit or modify any section on any page as you required.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="icon">
+              <img src="{% static 'Market/images/icon-06.png' %}" alt="">
+            </div>
+            <h4>Sell Your NFT &amp; Make Profit</h4>
+            <p>If you would like to support our TemplateMo website, please visit <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">our contact page</a> to make a PayPal contribution. Thank you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+  <div class="currently-market">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+          <div class="section-heading">
+            <div class="line-dec"></div>
+            <h2 style="color:#308665">Items Currently In The Market.</h2>
+          </div> 
+        </div> 
+        <br>
+        <div class="col-lg-6">
+          <div class="filters">
+            <ul>
+              <li class="active">All Items</li>
+              <li>Tableware</li>
+              <li>Cutlery</li>
+              <li>Drinkware</li>
+              <li>Food Container</li>
+             <li>Straw and Stirrers</li>
+              <li>Food Packaging</li> 
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row grid">
+            <div class="col-lg-6 currently-market-item all msc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-1.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>White Bowl</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Household</h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all dig">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-2.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>White Cup 75cc</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-3.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Paper Cup</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all vtr">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-4.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Disposible Glass</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all vrt dig">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-5.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Aluminum Food Container</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-6.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>White Plastic Glass</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-7.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Aluminum Foil Paper</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-8.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Transparent cover container</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-10.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Clear Glass</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-11.png.jpg' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Face Masks</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 100px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-12.png.jpg' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Plastic Shopping Bags</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-13.png.jpg' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Mops</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-14.png.jpg' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Detergant Powder</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-15.png.jpg' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>White PLastic Cup</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-16.png' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Fancy Paper Glass</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 currently-market-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="{% static 'Market/images/product-17.png.jpg' %}" alt="" style="border-radius: 20px; height:315px; width:330px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Plastic Cover Packet</h4>
+                  <span class="author">
+                    <img src="{% static 'Market/images/logo.png' %}" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Banucci Huosehold<br></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="bid">
+                    Current status<br><strong>Selling</strong><br><em>All over UAE</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-dark">
+    <footer>
+        <div class="container">
+          <div class="row">
+              <div class="col-md-3 item">
+                <h3>What we proide:</h3>
+                <ul>
+                    <li><a href="#">Extensive selection of plastic and disposable utensils available for distribution throughout the UAE</a></li> <br>
+                    <li><a href="#">Expertise in manufacturing and distributing top-tier household utensils</a></li> <br>
+                    <li><a href="#">Dedicated to catering to the requirements of both wholesale and retail sectors</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 item">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Supply of plastic and disposable utensils in the UAE</a></li> <br>
+                    <li><a href="#">Manufacturing and distribution of high-quality household utensils</a></li> <br>
+                    <li><a href="#">Customized packaging and branding services</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 item">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="{% url "author" %}">Company</a></li> <br>
+                    <li><a href="{% url "author" %}">Team</a></li> <br>
+                    <li><a href="{% url "author" %}">Careers</a></li>
+                </ul>
+              </div>
+
+              <div class="col item social">
+                <h3>Follow us on Social Media</h3>         <br>
+                <a href="https://www.facebook.com/bannucillc" target="_blank"><i class="fa fa-facebook"></i></a><br><br>
+                <a href="https://www.tiktok.com/@bannuccillc" target="_blank"><i class="fa fa-tiktok"></i></a><br><br>
+                <a href="https://www.instagram.com/bannuccillc" target="_blank"><i class="fa fa-instagram"></i></a><br><br>
+              </div>
+          </div>
+          {% comment %} <p class="copyright">BBBootstrap.com &copy; 2020</p> {% endcomment %}
+      </div>
+  </footer>
+</div>
+
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'Market/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'Market/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'Market/js/isotope.min.js' %}"></script>
+  <script src="{% static 'Market/js/owl-carousel.js' %}"></script>
+
+  <script src="{% static 'Market/js/tabs.js' %}"></script>
+  <script src="{% static 'Market/js/popup.js' %}"></script>
+  <script src="{% static 'Market/js/custom.js' %}"></script>
+
+  </body>
+</html>
